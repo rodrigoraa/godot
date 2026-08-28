@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://blyiyvv5q0foq" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="5_qm7rg"]
 [ext_resource type="Texture2D" uid="uid://bwedevduhlcbx" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="6_0nboi"]
 [ext_resource type="Texture2D" uid="uid://dvkpr5h28glsi" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="7_3knxq"]
+[ext_resource type="PackedScene" uid="uid://bkqply6n868h8" path="res://entities/camera_2d.tscn" id="9_0nboi"]
 
 [node name="forest" type="Node2D" unique_id=654882919]
 
@@ -18,6 +19,8 @@ position = Vector2(69, 138)
 position = Vector2(-1, 71)
 tile_map_data = PackedByteArray("AAABAAcAAQAEAAEAAAACAAcAAQAEAAEAAAADAAcAAQAEAAEAAAAEAAcAAQAEAAEAAAAFAAcAAQAEAAEAAAAGAAcAAQAEAAEAAAAHAAcAAQAEAAEAAAAIAAcAAQAEAAEAAAAJAAcAAQAEAAEAAAAKAAcAAQAEAAEAAAALAAcAAQAEAAEAAAAMAAcAAQAEAAEAAAANAAcAAQAEAAEAAAAOAAcAAQAEAAEAAAAPAAcAAQAEAAEAAAAQAAcAAQAEAAEAAAARAAcAAQAEAAEAAAASAAcAAQAEAAEAAAATAAcAAQAEAAEAAAAUAAcAAQAEAAEAAAAVAAcAAQAEAAEAAAAWAAcAAQAEAAEAAAAXAAcAAQAEAAEAAAAYAAcAAQAEAAEAAAAZAAcAAQAEAAEAAAAaAAcAAQAEAAEAAAAbAAcAAQAEAAEAAAAcAAcAAQAEAAEAAAAdAAcAAQAEAAEAAAAeAAcAAQAEAAEAAAAfAAcAAQAEAAEAAAAAAAcAAQADAAEAAAAgAAcAAQAEAAEAAAAiAAcAAQAEAAEAAAAjAAcAAQAEAAEAAAAkAAcAAQAEAAEAAAAlAAcAAQAEAAEAAAAmAAcAAQAEAAEAAAAhAAcAAQAEAAEAAAAnAAcAAQAEAAEAAAAoAAcAAQAEAAEAAAApAAcAAQAEAAEAAAAqAAcAAQAEAAEAAAArAAcAAQAEAAEAAAAsAAcAAQAEAAEAAAAtAAcAAQAEAAEAAAAuAAcAAQAEAAEAAAAvAAcAAQAEAAEAAAAwAAcAAQAEAAEAAAAxAAcAAQAEAAEAAAAyAAcAAQAEAAEAAAAzAAcAAQAEAAEAAAA0AAcAAQAEAAEAAAA1AAcAAQAEAAEAAAA=")
 tile_set = ExtResource("2_bgcxa")
+
+[node name="Camera2D" parent="." unique_id=549583791 instance=ExtResource("9_0nboi")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=274335924]
 
