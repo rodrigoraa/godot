@@ -114,7 +114,8 @@ animations = [{
 [node name="player" type="Node2D" unique_id=870111983]
 position = Vector2(57, 31)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=134733067]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=134733067 groups=["player"]]
+collision_layer = 3
 script = ExtResource("1_b0kkn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=828112370]
@@ -127,7 +128,3 @@ position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_t07pf")
 animation = &"jump"
 autoplay = "idle"
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D/CollisionShape2D" unique_id=516301019]
-limit_left = 0
-limit_bottom = 200
