@@ -4,8 +4,8 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
 
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -300.0
+const SPEED = 170.0
+const JUMP_VELOCITY = -350.0
 
 
 func _physics_process(delta: float) -> void:
