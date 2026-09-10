@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ckp1kirdrdbqj" path="res://sprites/combate/zumbi_grande/walk.png" id="6_iwcpk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ajc6r"]
-radius = 12.0
+radius = 20.0
 height = 64.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2udpr"]
@@ -299,7 +299,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwbe0"]
-size = Vector2(40, 44)
+size = Vector2(44, 44)
 
 [node name="Zumbi" type="CharacterBody2D" unique_id=1647949076]
 script = ExtResource("1_3l23r")
@@ -320,6 +320,7 @@ animation = &"walk"
 autoplay = "idle"
 
 [node name="AreaAtaque" type="Area2D" parent="." unique_id=526462533]
+position = Vector2(42, 0)
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque" unique_id=167516258]

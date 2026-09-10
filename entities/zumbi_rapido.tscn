@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://1h1bg2fposq2" path="res://sprites/combate/zumbi_rapido/run.png" id="6_w6dj7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ajc6r"]
-radius = 12.0
-height = 64.0
+radius = 18.0
+height = 60.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1svb"]
 atlas = ExtResource("2_uj5xg")
