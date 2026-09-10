@@ -176,7 +176,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dgkvs")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"attack",
 "speed": 10.0
 }, {
@@ -202,7 +202,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_djm52")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"death",
 "speed": 10.0
 }, {
@@ -228,7 +228,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j4tlr")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"hurt",
 "speed": 10.0
 }, {
@@ -292,23 +292,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwbe0"]
+size = Vector2(40, 44)
 
 [node name="Zumbi" type="CharacterBody2D" unique_id=1647949076]
 script = ExtResource("1_lap5m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537473832]
-position = Vector2(36, 34)
 shape = SubResource("CapsuleShape2D_ajc6r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1260420278]
 position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_kwbe0")
-animation = &"attack"
+animation = &"walk"
 autoplay = "idle"
-centered = false
 
 [node name="AreaAtaque" type="Area2D" parent="." unique_id=526462533]
-position = Vector2(30, 0)
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque" unique_id=167516258]

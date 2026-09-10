@@ -22,12 +22,13 @@ enum ZumbiState {
 @export var animacao_de_andar: String = "walk"
 @export var tempo_entre_ataques: float = 1.2
 @export var quadro_do_golpe: int = 4
+@export var tempo_hurt: float = 0.25
 
 var golpe_aplicado: bool = false
 var vida: int
 var status: ZumbiState
 var tempo_do_ataque: float = 0.0
-
+var tempo_no_hurt: float = 0.0
 
 func _ready() -> void:
 	vida = vida_maxima
@@ -139,4 +140,37 @@ func attack_state() -> void:
 
 
 func hurt_state() -> void:
-	pass
+	tempo_no_hurt += get_physics_process_delta_time()
+
+	if tempo_no_hurt >= tempo_hurt:
+		go_to_chase_state()
+		return
+
+func levar_dano(quantidade: int) -> void:
+	if status == ZumbiState.death or status == ZumbiState.hurt:
+		return
+
+	vida -= quantidade
+
+	if vida <= 0:
+		go_to_death_state()
+		return
+
+	go_to_hurt_state()
+	
+func go_to_hurt_state() -> void:
+	status = ZumbiState.hurt
+	anim.play("hurt")
+	velocity.x = 0
+	tempo_no_hurt = 0.0
+	area_ataque.monitoring = false
+	
+func go_to_death_state() -> void:
+	status = ZumbiState.death
+	anim.play("death")
+	velocity.x = 0
+	area_ataque.monitoring = false
+	$CollisionShape2D.set_deferred("disabled", true)
+	set_physics_process(false)
+	await anim.animation_finished
+	queue_free()

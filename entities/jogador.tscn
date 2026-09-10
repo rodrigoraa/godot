@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cxl5p5dxdnbjl"]
+
+[ext_resource type="SpriteFrames" uid="uid://lnh4xby3qgwk" path="res://tiles/sprite_frames.tres" id="1_6dywx"]
+[ext_resource type="Script" uid="uid://b18d2m4v8uvcb" path="res://scripts/jogador.gd" id="1_nvuv8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kwbe0"]
+height = 60.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwbe0"]
+size = Vector2(60, 40)
+
+[node name="jogador" type="CharacterBody2D" unique_id=911223257 groups=["player"]]
+script = ExtResource("1_nvuv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=549830999]
+shape = SubResource("CapsuleShape2D_kwbe0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1718765686]
+sprite_frames = ExtResource("1_6dywx")
+animation = &"attack"
+
+[node name="AreaGolpe" type="Area2D" parent="." unique_id=766281695]
+position = Vector2(40, 0)
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGolpe" unique_id=494572677]
+shape = SubResource("RectangleShape2D_kwbe0")
