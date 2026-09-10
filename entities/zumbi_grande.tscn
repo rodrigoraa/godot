@@ -324,5 +324,4 @@ position = Vector2(42, 0)
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque" unique_id=167516258]
-position = Vector2(-6, 24)
 shape = SubResource("RectangleShape2D_kwbe0")
